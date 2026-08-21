@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-palette="emerald">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Laboratory Resource Agent - Mission Control</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Background Glows -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <div class="app-layout">
+    
+    <!-- Top Navigation / Header -->
+    <header class="top-nav">
+      <div class="nav-left">
+        <div class="brand-badge">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 2v7.31"></path>
+              <path d="M14 9.3V2"></path>
+              <path d="M8.5 2h7"></path>
+              <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+              <path d="M5.52 16h12.96"></path>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <div class="brand-title-row">
+              <h1>Smart Laboratory Resource Agent</h1>
+              <span class="version-tag">v2.0</span>
+            </div>
+            <span class="brand-tagline">Autonomous Multi-Agent Allocation & Conflict Resolution Engine</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <!-- Live System Metric Pill -->
+        <div class="metric-pill" title="All 5 autonomous sub-agents operational">
+          <span class="ping-circle">
+            <span class="ping-wave"></span>
+            <span class="ping-dot"></span>
+          </span>
+          <span class="metric-label">5 Agents Active</span>
+        </div>
+
+        <!-- Color Palette Picker -->
+        <div class="palette-picker-container" title="Select UI Color Theme">
+          <span class="palette-label">Theme:</span>
+          <div class="palette-swatches" id="paletteSwatches">
+            <button type="button" class="palette-dot-btn active" data-palette="emerald" title="Bio-Tech Emerald & Mint">
+              <span class="dot-swatch swatch-emerald"></span>
+            </button>
+            <button type="button" class="palette-dot-btn" data-palette="cobalt" title="Cyber Cobalt & Oceanic Blue">
+              <span class="dot-swatch swatch-cobalt"></span>
+            </button>
+            <button type="button" class="palette-dot-btn" data-palette="violet" title="Electric Violet & Deep Indigo">
+              <span class="dot-swatch swatch-violet"></span>
+            </button>
+            <button type="button" class="palette-dot-btn" data-palette="amber" title="Solar Amber & Industrial Gold">
+              <span class="dot-swatch swatch-amber"></span>
+            </button>
+            <button type="button" class="palette-dot-btn" data-palette="crimson" title="Neon Crimson & Cyber Rose">
+              <span class="dot-swatch swatch-crimson"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mode Toggle Switch -->
+        <div class="mode-switch-box">
+          <span class="mode-caption">Backend:</span>
+          <label class="switch-control" title="Toggle between Mock Demo and Live POST /api/request">
+            <input type="checkbox" id="mockModeToggle" checked>
+            <span class="switch-slider"></span>
+            <span class="switch-text" id="modeLabel">Mock Mode</span>
+          </label>
+        </div>
+
+        <!-- Theme Toggle Button (Dark / Light) -->
+        <button type="button" id="themeToggleBtn" class="icon-btn" title="Toggle Dark / Light Mode" aria-label="Toggle Theme">
+          <svg class="sun-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Notification / Alert Banners -->
+    <div id="notificationArea" class="notification-zone" aria-live="polite">
+      <!-- Dynamic notification alerts pop up here -->
+    </div>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <main class="dashboard-viewport">
+
+      <!-- SECTION 1: Natural Language Request Studio -->
+      <section class="studio-section">
+        <div class="studio-card">
+          <div class="studio-card-glow"></div>
+          
+          <div class="studio-header">
+            <div class="section-title-wrap">
+              <span class="section-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </span>
+              <div>
+                <h2>Lab Resource Request Studio</h2>
+                <p class="section-desc">Prompt the AI Orchestrator with equipment requirements, target dates, and slot timings.</p>
+              </div>
+            </div>
+            <div class="keyboard-badge">
+              <span>Submit:</span> <kbd>Ctrl</kbd> + <kbd>Enter</kbd>
+            </div>
+          </div>
+
+          <form id="requestForm" class="command-form">
+            <div class="textarea-shell">
+              <textarea 
+                id="promptInput" 
+                rows="3" 
+                placeholder="e.g. I need 2 Arduino Uno tomorrow from 10 AM to 12 PM"
+                required></textarea>
+              
+              <div class="textarea-actions">
+                <button type="button" id="clearTextBtn" class="subtle-btn" title="Clear input">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Quick Demo Preset Pills -->
+            <div class="demo-presets-row">
+              <span class="preset-label">Demo Scenarios:</span>
+              <div class="preset-pill-group">
+                <button type="button" class="preset-pill preset-success" data-type="success">
+                  <span class="pill-dot"></span>
+                  <span>2x Arduino Uno (Success)</span>
+                </button>
+                <button type="button" class="preset-pill preset-warning" data-type="conflict">
+                  <span class="pill-dot"></span>
+                  <span>3x Oscilloscopes (Conflict & Alt Slot)</span>
+                </button>
+                <button type="button" class="preset-pill preset-danger" data-type="low_stock">
+                  <span class="pill-dot"></span>
+                  <span>10x Raspberry Pi (Out of Stock)</span>
+                </button>
+                <button type="button" class="preset-pill preset-flagged" data-type="auditor_reject">
+                  <span class="pill-dot"></span>
+                  <span>Spectrometer Overnight (Safety Reject)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Primary Form Controls -->
+            <div class="form-bottom-bar">
+              <button type="submit" id="submitBtn" class="primary-action-btn">
+                <span class="btn-spinner hidden"></span>
+                <span class="btn-text">Execute Multi-Agent Request</span>
+                <svg class="btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <button type="button" id="resetBtn" class="secondary-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                  <path d="M21 3v5h-5"></path>
+                  <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                  <path d="M8 16H3v5"></path>
+                </svg>
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- SECTION 2: Horizontal Agent Activity Pipeline -->
+      <section class="pipeline-section">
+        <div class="pipeline-card">
+          <div class="pipeline-header">
+            <div class="pipeline-title-group">
+              <div class="pulse-ring"></div>
+              <h3>Agent Activity Pipeline</h3>
+              <span class="agent-count-badge">5 Multi-Agent Nodes</span>
+            </div>
+            <div class="pipeline-progress-meta">
+              <span class="meta-label">Status:</span>
+              <span id="pipelineStatus" class="pipeline-state-badge">Standby</span>
+            </div>
+          </div>
+
+          <!-- Flow Stepper Grid -->
+          <div class="agent-flow-grid" id="agentsContainer">
+
+            <!-- 1. Orchestrator -->
+            <div class="agent-node" id="agent-orchestrator" data-agent="orchestrator">
+              <div class="node-track-line"></div>
+              <div class="node-card">
+                <div class="node-head">
+                  <div class="node-icon-box orchestrator-theme">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                  <div class="node-meta">
+                    <span class="node-name">Orchestrator</span>
+                    <span class="node-badge badge-idle">Idle</span>
+                  </div>
+                </div>
+                <div class="node-role">Intent parsing & agent delegation</div>
+                <div class="node-log">Waiting for user input...</div>
+              </div>
+            </div>
+
+            <!-- 2. Inventory Agent -->
+            <div class="agent-node" id="agent-inventory" data-agent="inventory">
+              <div class="node-track-line"></div>
+              <div class="node-card">
+                <div class="node-head">
+                  <div class="node-icon-box inventory-theme">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+                  <div class="node-meta">
+                    <span class="node-name">Inventory Agent</span>
+                    <span class="node-badge badge-idle">Idle</span>
+                  </div>
+                </div>
+                <div class="node-role">Stock counts & hardware catalog</div>
+                <div class="node-log">Catalog synced (84 hardware models).</div>
+              </div>
+            </div>
+
+            <!-- 3. Scheduling Agent -->
+            <div class="agent-node" id="agent-scheduling" data-agent="scheduling">
+              <div class="node-track-line"></div>
+              <div class="node-card">
+                <div class="node-head">
+                  <div class="node-icon-box scheduling-theme">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                  </div>
+                  <div class="node-meta">
+                    <span class="node-name">Scheduling Agent</span>
+                    <span class="node-badge badge-idle">Idle</span>
+                  </div>
+                </div>
+                <div class="node-role">Calendar booking & workbench slots</div>
+                <div class="node-log">Lab schedule calendar connected.</div>
+              </div>
+            </div>
+
+            <!-- 4. Conflict Resolver -->
+            <div class="agent-node" id="agent-conflict" data-agent="conflict">
+              <div class="node-track-line"></div>
+              <div class="node-card">
+                <div class="node-head">
+                  <div class="node-icon-box conflict-theme">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="node-meta">
+                    <span class="node-name">Conflict Resolver</span>
+                    <span class="node-badge badge-idle">Idle</span>
+                  </div>
+                </div>
+                <div class="node-role">Priority arbitration & alt slots</div>
+                <div class="node-log">Alternative slot engine ready.</div>
+              </div>
+            </div>
+
+            <!-- 5. Auditor -->
+            <div class="agent-node" id="agent-auditor" data-agent="auditor">
+              <div class="node-card">
+                <div class="node-head">
+                  <div class="node-icon-box auditor-theme">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                  </div>
+                  <div class="node-meta">
+                    <span class="node-name">Auditor</span>
+                    <span class="node-badge badge-idle">Idle</span>
+                  </div>
+                </div>
+                <div class="node-role">Safety protocols & compliance</div>
+                <div class="node-log">Safety protocols and policies active.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Split View: Result Pass & Live Telemetry Stream -->
+      <section class="split-output-section">
+        
+        <!-- LEFT: Digital Lab Reservation Pass -->
+        <div class="output-card result-panel" id="resultCard">
+          <div class="output-card-header">
+            <div class="header-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <h3>Lab Reservation Voucher</h3>
+            </div>
+            <span id="bookingStatusBadge" class="status-stamp stamp-neutral">AWAITING REQUEST</span>
+          </div>
+
+          <!-- Empty State Container -->
+          <div id="emptyResultState" class="empty-pass-view">
+            <div class="empty-holo-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h4>No Active Booking Processed</h4>
+            <p>Type a request in natural language or click any demo preset above to see autonomous lab resource allocation.</p>
+          </div>
+
+          <!-- Populated Result Voucher -->
+          <div id="populatedResult" class="voucher-body hidden">
+            
+            <div class="voucher-hero" id="statusHighlightBox">
+              <div class="voucher-hero-icon" id="highlightIcon"></div>
+              <div class="voucher-hero-text">
+                <h4 id="highlightTitle">Allocation Outcome</h4>
+                <p id="highlightSubtitle">Detailed decision status</p>
+              </div>
+            </div>
+
+            <div class="voucher-table">
+              <div class="voucher-row">
+                <div class="voucher-cell">
+                  <span class="cell-label">Equipment Requested</span>
+                  <span class="cell-value" id="resEquipment">—</span>
+                </div>
+                <div class="voucher-cell">
+                  <span class="cell-label">Reservation Date</span>
+                  <span class="cell-value" id="resDate">—</span>
+                </div>
+              </div>
+
+              <div class="voucher-row">
+                <div class="voucher-cell">
+                  <span class="cell-label">Time Window</span>
+                  <span class="cell-value" id="resTime">—</span>
+                </div>
+                <div class="voucher-cell">
+                  <span class="cell-label">Booking Status</span>
+                  <span class="cell-value" id="resStatus">—</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agent Decision Reason Card -->
+            <div class="decision-box">
+              <div class="decision-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Agent Decision Reason</span>
+              </div>
+              <p id="resReason" class="decision-text">—</p>
+            </div>
+
+            <!-- Alternative Slot Suggestion Box -->
+            <div id="alternativeBox" class="alternative-callout hidden">
+              <div class="alt-callout-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 3h5v5"></path>
+                  <path d="M4 20L21 3"></path>
+                  <path d="M21 16v5h-5"></path>
+                  <path d="M15 15l6 6"></path>
+                  <path d="M4 4l5 5"></path>
+                </svg>
+                <span>Recommended Alternative Option</span>
+              </div>
+              <p id="altText" class="alt-callout-text">—</p>
+              <button type="button" id="acceptAltBtn" class="accept-alt-action-btn">
+                <span>Accept Alternative Slot</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="voucher-actions">
+              <button type="button" id="copyResultBtn" class="action-outline-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy Voucher
+              </button>
+              <button type="button" id="newRequestBtn" class="action-solid-btn">
+                Create New Request
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT: Multi-Agent Telemetry Stream / Architecture Card -->
+        <div class="output-card telemetry-panel">
+          <div class="output-card-header">
+            <div class="header-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 14 15 20 9"></polyline>
+                <polyline points="14 9 20 9 20 15"></polyline>
+              </svg>
+              <h3>Multi-Agent Telemetry & Logs</h3>
+            </div>
+            <span class="telemetry-live-tag">LIVE STREAM</span>
+          </div>
+
+          <div class="telemetry-terminal" id="telemetryStream">
+            <div class="log-entry log-system">
+              <span class="log-time">[SYSTEM]</span>
+              <span class="log-msg">Smart Laboratory Resource Agent environment initialized. 5 sub-agents ready.</span>
+            </div>
+            <div class="log-entry log-info">
+              <span class="log-time">[DAEMON]</span>
+              <span class="log-msg">Ready to accept natural language prompts or POST /api/request calls.</span>
+            </div>
+          </div>
+
+          <div class="spec-matrix-footer">
+            <div class="matrix-item">
+              <span class="matrix-title">Orchestrator</span>
+              <span class="matrix-desc">NLP Intent & Dispatch</span>
+            </div>
+            <div class="matrix-item">
+              <span class="matrix-title">Inventory</span>
+              <span class="matrix-desc">Live Stock Checks</span>
+            </div>
+            <div class="matrix-item">
+              <span class="matrix-title">Scheduling</span>
+              <span class="matrix-desc">Slot Reservation</span>
+            </div>
+            <div class="matrix-item">
+              <span class="matrix-title">Conflict</span>
+              <span class="matrix-desc">Smart Re-routing</span>
+            </div>
+            <div class="matrix-item">
+              <span class="matrix-title">Auditor</span>
+              <span class="matrix-desc">Safety & Auth Gate</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Global Floating Toast Container -->
+    <div id="toastContainer" class="toast-stack" aria-live="polite"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
