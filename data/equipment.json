@@ -1,0 +1,139 @@
+[
+  {
+    "id": "EQ-001",
+    "name": "Arduino Uno Rev3",
+    "category": "Microcontrollers",
+    "total_quantity": 15,
+    "available_quantity": 12,
+    "location": "Cabinet A - Shelf 1",
+    "status": "AVAILABLE",
+    "description": "ATmega328P microcontroller board with 14 digital I/O pins and 6 analog inputs.",
+    "specifications": {
+      "operating_voltage": "5V",
+      "clock_speed": "16 MHz",
+      "digital_io": 14,
+      "analog_inputs": 6
+    }
+  },
+  {
+    "id": "EQ-002",
+    "name": "Raspberry Pi 4 Model B (4GB)",
+    "category": "Single Board Computers",
+    "total_quantity": 10,
+    "available_quantity": 6,
+    "location": "Cabinet A - Shelf 2",
+    "status": "AVAILABLE",
+    "description": "Quad-core 64-bit ARM-Cortex A72 SBC with 4GB LPDDR4 RAM, dual 4K micro-HDMI, and Gigabit Ethernet.",
+    "specifications": {
+      "ram": "4GB LPDDR4",
+      "cpu": "Quad-core Cortex-A72 @ 1.5GHz",
+      "connectivity": "Gigabit Ethernet, WiFi 2.4/5GHz, Bluetooth 5.0"
+    }
+  },
+  {
+    "id": "EQ-003",
+    "name": "Digital Storage Oscilloscope (Rigol DS1054Z)",
+    "category": "Measurement & Testing",
+    "total_quantity": 6,
+    "available_quantity": 4,
+    "location": "Bench 3 - Station B",
+    "status": "AVAILABLE",
+    "description": "50MHz 4-channel digital storage oscilloscope with 1GSa/s real-time sample rate.",
+    "specifications": {
+      "bandwidth": "50 MHz",
+      "channels": 4,
+      "sample_rate": "1 GSa/s",
+      "memory_depth": "24 Mpts"
+    }
+  },
+  {
+    "id": "EQ-004",
+    "name": "37-in-1 Sensor Kit",
+    "category": "Sensors & Actuators",
+    "total_quantity": 20,
+    "available_quantity": 18,
+    "location": "Cabinet B - Shelf 1",
+    "status": "AVAILABLE",
+    "description": "Comprehensive sensor module kit including temperature, humidity, ultrasonic, PIR, IR, relay, and sound sensors.",
+    "specifications": {
+      "sensor_count": 37,
+      "compatibility": ["Arduino", "Raspberry Pi", "ESP32"],
+      "case_included": true
+    }
+  },
+  {
+    "id": "EQ-005",
+    "name": "Solderless Breadboard (830 Points)",
+    "category": "Prototyping",
+    "total_quantity": 30,
+    "available_quantity": 25,
+    "location": "Cabinet B - Shelf 3",
+    "status": "AVAILABLE",
+    "description": "Standard 830-point solderless breadboard with power distribution rails for circuit prototyping.",
+    "specifications": {
+      "tie_points": 830,
+      "power_rails": 4,
+      "pitch": "2.54 mm"
+    }
+  },
+  {
+    "id": "EQ-006",
+    "name": "Digital Multimeter (Fluke 115)",
+    "category": "Measurement & Testing",
+    "total_quantity": 8,
+    "available_quantity": 7,
+    "location": "Bench 1 - Tool Rack",
+    "status": "AVAILABLE",
+    "description": "True-RMS digital multimeter for precise AC/DC voltage, current, resistance, and continuity measurements.",
+    "specifications": {
+      "type": "True-RMS",
+      "display_counts": 6000,
+      "safety_rating": "CAT III 600V"
+    }
+  },
+  {
+    "id": "EQ-007",
+    "name": "Soldering Workstation (Hakko FX-888D)",
+    "category": "Tools & Equipment",
+    "total_quantity": 5,
+    "available_quantity": 3,
+    "location": "Lab 102 - Soldering Bay",
+    "status": "AVAILABLE",
+    "description": "Digital ESD-safe temperature adjustable 70W soldering station with ceramic heating element.",
+    "specifications": {
+      "power": "70W",
+      "temperature_range": "50°C - 480°C",
+      "esd_safe": true
+    }
+  },
+  {
+    "id": "EQ-008",
+    "name": "Dual-Channel Function Generator",
+    "category": "Measurement & Testing",
+    "total_quantity": 4,
+    "available_quantity": 2,
+    "location": "Bench 3 - Station A",
+    "status": "AVAILABLE",
+    "description": "25MHz dual-channel arbitrary waveform and function generator for signal synthesis.",
+    "specifications": {
+      "max_frequency": "25 MHz",
+      "channels": 2,
+      "waveform_types": ["Sine", "Square", "Ramp", "Pulse", "Noise", "Arbitrary"]
+    }
+  },
+  {
+    "id": "EQ-009",
+    "name": "ESP32 Development Board",
+    "category": "Microcontrollers",
+    "total_quantity": 12,
+    "available_quantity": 0,
+    "location": "Cabinet A - Shelf 1",
+    "status": "LOW_STOCK",
+    "description": "ESP-WROOM-32 Wi-Fi & Bluetooth dual-mode development board for IoT projects.",
+    "specifications": {
+      "wireless": "WiFi 802.11 b/g/n + Bluetooth 4.2 BLE",
+      "cores": 2,
+      "flash": "4MB"
+    }
+  }
+]

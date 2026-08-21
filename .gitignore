@@ -1,8 +1,12 @@
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
-.env
-.venv
-env/
-venv/
+*.pyc
 .pytest_cache/
+
+# Environment
+.env
+venv/
+.venv/
+
+# Temporary files
+*.tmp
