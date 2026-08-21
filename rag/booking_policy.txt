@@ -1,0 +1,53 @@
+# LABORATORY BOOKING POLICY, CONFLICT RESOLUTION & APPROVALS
+
+SECTION 1: BOOKING RESTRICTIONS & LEAD TIME
+1.1 Advance Notice:
+- Standard Equipment (Tier 1, including Oscilloscopes & Microscopes): Can be booked with as little as 1 hour advance notice up to 7 days in advance.
+- High-Tier Equipment (Tier 2): Requires minimum 12 hours advance notice, up to 14 days in advance.
+- Restricted Equipment (Tier 3 - SEM, NMR, GC-MS): Requires minimum 24 hours advance notice, up to 14 days in advance.
+- Same-day walk-in bookings are only allowed for Tier 1 equipment if the machine is currently idle and not reserved for the next 2 hours.
+
+1.2 Concurrency & Quota Restrictions:
+- A user cannot hold overlapping bookings for two different instruments at the exact same timestamp (single user cannot be in two places at once).
+- Maximum of 1 active session per user at any single instant.
+- Maximum limit of 3 concurrent active bookings per user. Attempting to book a 4th slot will be automatically rejected until an existing reservation is completed or cancelled.
+
+SECTION 2: CONFLICT HANDLING & PRIORITY RULES
+2.1 Priority Hierarchy for Conflicting Requests:
+When multiple users request overlapping time slots on the same piece of equipment, the reservation engine and auditor evaluate priority according to this strict hierarchy:
+1. Level A (Top Priority): Official Timetabled Academic Courses, Laboratory Exams, and University Practical Demonstrations.
+2. Level B (High Priority): Funded Faculty Research Projects and Graduate/PhD Thesis Experiments with documented upcoming defense deadlines.
+3. Level C (Standard Priority): Postgraduate/Undergraduate coursework, project assignments, and thesis research.
+4. Level D (Lowest Priority): Exploratory personal projects, training practice, and unverified student requests.
+
+2.2 Conflict Resolution Workflow:
+- If two requests share identical priority levels, resolution is strictly "First-Come, First-Served" based on submission timestamp.
+- If a higher-priority request bumps an existing lower-priority booking, the affected user must be notified immediately and provided with:
+  a) The next nearest available open slot for that instrument.
+  b) Priority booking status for their rescheduled slot.
+- Users with documented project deadlines within 48 hours receive a 1-tier temporary priority boost upon supervisor verification.
+
+SECTION 3: CANCELLATION & NO-SHOW POLICY
+3.1 Cancellation Guidelines:
+- Free cancellation is permitted up to 2 hours prior to the scheduled start time.
+- Late cancellations (under 2 hours before start time) without medical or academic justification will be flagged as "Late Cancellation".
+3.2 No-Show Rules & Penalties:
+- A grace period of 20 minutes is permitted from the scheduled start time.
+- If the user fails to check in / swipe badge within 20 minutes, the booking is automatically marked as "No-Show" and the machine is released to other lab users.
+- Accumulating 2 No-Shows within a 30-day window results in a 14-day booking freeze for the student account.
+
+SECTION 4: AUDITOR & APPROVAL RULES
+4.1 Automatic Approval Criteria:
+A booking request (e.g. Oscilloscope or Standard Tier 1 equipment from 4 PM to 6 PM) is automatically APPROVED if ALL of the following criteria are met:
+- The requested time falls entirely within standard laboratory operating hours (08:00 - 20:00 M-F / 8 AM to 8 PM, 09:00 - 17:00 Sat).
+- The equipment operational status is "Available" (not in maintenance, calibration, or decommissioned).
+- The requested slot does not overlap with any scheduled maintenance windows (e.g. Wed 12:00-14:00).
+- The student possesses valid, unexpired certifications required for the equipment tier (e.g. Safety 101 for Tier 1 standard instruments like Oscilloscopes; Level 2/3 for higher tiers).
+- The booking duration is within the allowed maximum (<= 3 hours for Tier 1/2, <= 2 hours for Tier 3; a 2-hour slot like 4 PM - 6 PM is fully valid).
+- The user does not exceed the active reservation quota (<= 3 concurrent active bookings) and has no active suspension/freeze.
+- There are no overlapping reservations for the requested time slot.
+
+4.2 Supervisor Sign-Off & Manual Approval:
+- Tier 3 instruments (SEM, NMR, GC-MS) require explicit supervisor confirmation (`supervisor_approved=True`).
+- After-hours access requests require prior Lab Safety Officer permit approval.
+- Any request lacking required approvals must be flagged as REJECTED or PENDING_SUPERVISOR_APPROVAL with the exact requirement explained.

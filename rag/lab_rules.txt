@@ -1,0 +1,37 @@
+# LABORATORY OPERATING RULES & GENERAL GUIDELINES
+
+SECTION 1: LABORATORY OPERATING HOURS
+1.1 Standard Operating Hours & Daily Booking Timeslots:
+- Monday through Friday: 08:00 AM to 20:00 PM (08:00 - 20:00 / 8:00 AM to 8:00 PM).
+- Weekday Afternoon Sessions: Booking slots scheduled between 4 PM to 6 PM (16:00 - 18:00) fall strictly within regular open laboratory operating hours.
+- Saturday: 09:00 AM to 17:00 PM (09:00 - 17:00 / 9:00 AM to 5:00 PM).
+- Sunday: CLOSED for facility deep cleaning and system maintenance.
+- Official university holidays: CLOSED unless special operational exemption is granted.
+- General Rule: All equipment bookings must be scheduled within standard operating hours unless an After-Hours Access Permit is approved.
+
+1.2 After-Hours Access Policy:
+- Any laboratory access between 20:00 PM and 08:00 AM on weekdays or after 17:00 PM on Saturdays is classified as "After-Hours".
+- After-hours work is restricted to Level 2 (Graduate/Postgraduate) and Level 3 (Faculty/Researchers) personnel.
+- Undergraduates are strictly prohibited from working in the laboratory after hours without the physical presence of an authorized supervisor.
+- An After-Hours Access Permit must be submitted and approved by the Lab Safety Officer at least 24 hours in advance.
+- The "Two-Person Rule" (Buddy System) applies to all after-hours laboratory work involving chemicals, high voltages, or hazardous equipment.
+
+SECTION 2: LABORATORY SAFETY & PPE REQUIREMENTS
+2.1 Mandatory Personal Protective Equipment (PPE):
+- Standard lab coat (100% cotton or flame-resistant depending on chemical protocol).
+- ANSI Z87.1 certified safety glasses or chemical splash goggles at all times.
+- Closed-toe, non-slip footwear covering the entire foot (no sandals, crocs, or mesh shoes).
+- Nitrile or neoprene gloves appropriate for handled substances. Gloves must be removed before touching door handles, computers, or mobile devices.
+
+2.2 Cleanliness and Waste Disposal:
+- Workbenches must be decontaminated with 70% ethanol or approved disinfectant before and immediately after each session.
+- Chemical waste must be segregated into designated halogenated, non-halogenated, aqueous, or heavy metal waste containers.
+- Broken glassware and sharps must strictly be placed in puncture-resistant Yellow Sharps Bins.
+- Sinks and eyewash stations must remain unobstructed at all times.
+
+SECTION 3: EMERGENCY PROTOCOLS & ACCIDENT REPORTING
+3.1 Chemical Spills:
+- Minor spills (< 100 mL of low toxicity): Use workbench spill kit, neutralize, and notify lab technician within 1 hour.
+- Major spills (> 100 mL or toxic fumes): Evacuate the room immediately, pull fire alarm if necessary, and call emergency extension 5555.
+3.2 Incident Logging:
+- All accidents, near-misses, and equipment malfunctions must be formally logged in the Laboratory Incident Register within 24 hours.

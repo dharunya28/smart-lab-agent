@@ -1,0 +1,51 @@
+# EQUIPMENT USAGE, CERTIFICATION & DURATION RULES
+
+SECTION 1: EQUIPMENT CATEGORIES & CERTIFICATION TIERS
+1.1 Standard Equipment (Tier 1):
+- Includes: Digital Storage Oscilloscopes, Mixed-Signal Oscilloscopes, Function Generators, Digital Multimeters, Optical Microscopes, Standard Centrifuges, pH Meters, Analytical Balances, Vortex Mixers, Hotplate Stirrers, PCR Thermal Cyclers.
+- Certification Required: "General Lab Safety 101" certification (valid within 12 months).
+- Supervision & Approval: Independent operation permitted for all registered students (Undergraduates and Graduates). No supervisor approval required for standard hours.
+
+1.2 High-Tier / Specialized Equipment (Tier 2):
+- Includes: High-Speed Refrigerated Centrifuge, Spectrophotometer (UV-Vis), High-Performance Liquid Chromatography (HPLC), Fume Hood Specialized Stations.
+- Certification Required: "General Lab Safety 101" AND "Specialized Instrument Level 2 Training".
+- Supervision: Undergraduates must have faculty/TA sign-off; Graduates may operate independently.
+
+1.3 Restricted / Hazardous Instruments (Tier 3):
+- Includes: Scanning Electron Microscope (SEM), Nuclear Magnetic Resonance (NMR 400MHz/600MHz) Spectrometer, Gas Chromatography-Mass Spectrometry (GC-MS), High-Power Class 4 Laser Systems, Autoclaves.
+- Certification Required: "General Lab Safety 101", "Instrument Level 3 Operator License", and mandatory specific safety clearance (e.g., Radiation/Cryogen/Laser Safety).
+- Supervision: Requires active Supervisor Approval flag in the booking request and direct or on-call technician availability.
+
+1.4 Oscilloscope Booking & Approval Requirements:
+- Category & Eligibility: Digital Storage Oscilloscopes (DSO) are classified under Tier 1 Standard Equipment. All students with valid "General Lab Safety 101" are eligible to book an oscilloscope.
+- Supervisor Approval: No supervisor approval or faculty permission is required to book an oscilloscope during standard operating hours (08:00 to 20:00).
+- Booking Windows: Oscilloscopes can be booked for weekday and weekend daytime slots (e.g., afternoon slots from 4 PM to 6 PM).
+- Operating Session Duration: Minimum 30 minutes, typical session 2 hours, maximum allowable session limit of 3 hours.
+
+SECTION 2: BOOKING DURATION & LIMITS
+2.1 Session Duration Limits:
+- Standard Equipment (Tier 1 - including Oscilloscopes & Microscopes): Minimum duration is 30 minutes. Maximum duration is 3 continuous hours (180 minutes) per session. A 2-hour booking (such as 4 PM to 6 PM) is fully valid and permitted.
+- High-Tier Equipment (Tier 2): Minimum duration is 1 hour. Maximum duration is 3 continuous hours (180 minutes) per session.
+- Restricted Equipment (Tier 3 - SEM, NMR, GC-MS): Minimum duration is 1 hour. Maximum duration is 2 continuous hours (120 minutes) per session.
+- Maximum Daily Booking: No user may book more than 4 total aggregate hours of equipment in a single calendar day.
+- Maximum Active Bookings: A student can have at most 3 active future reservations at any given time.
+
+SECTION 3: EQUIPMENT AVAILABILITY & MAINTENANCE
+3.1 Equipment Operational Status:
+- Equipment marked "Available" / "Operational" can be booked immediately.
+- Equipment marked "In Maintenance", "Under Calibration", or "Decommissioned" is locked and cannot be reserved under any circumstances.
+3.2 Scheduled Maintenance Windows:
+- Routine weekly maintenance for all Tier 2 & Tier 3 instruments occurs every Wednesday between 12:00 PM and 14:00 PM (12:00 - 14:00).
+- Monthly calibration shutdown takes place on the first Monday of each month from 08:00 AM to 12:00 PM. No bookings can overlap with calibration.
+
+SECTION 4: EQUIPMENT USAGE, CHECKOUT & RETURN POLICY
+4.1 Check-in and Handover:
+- Users must swipe student/staff badge at the instrument console within 15 minutes of the scheduled start time.
+- Inspect the machine before starting; report any pre-existing damage, contamination, or calibration drift immediately to the lab technician.
+4.2 Return and Cleanup Protocol:
+- The user must stop operation 10 minutes before the end of their slot to allow sufficient time for cleaning, cool-down, sample removal, and decontamination.
+- Log out of instrument software and record final operational metrics in the physical/digital logbook.
+- Return all shared accessories (cuvettes, lenses, rotor keys, sample holders) to their labeled racks.
+4.3 Late Return and Overrun Penalties:
+- Exceeding the booked time slot by more than 15 minutes incurs a First Warning and overtime fee.
+- Exceeding the slot by 30+ minutes or leaving the station uncleaned results in an automatic 7-day suspension of laboratory booking privileges.
